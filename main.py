@@ -1,14 +1,13 @@
 import random
 
 number = random.randint(1, 100)
-attempts = 4
 
 print("Number Guessing Game")
 print("1 se 100 ke beech number guess karo!")
+print("Aapko 7 chances milenge.")
 
-while True:
+for attempt in range(1, 8):
     guess = int(input("Apna guess dalo: "))
-    attempts += 1
 
     if guess < number:
         print("Thoda bada number try karo!")
@@ -16,5 +15,8 @@ while True:
         print("Thoda chhota number try karo!")
     else:
         print("Sahi jawab!")
-        print("Aapne", attempts, "attempts mein guess kiya.")
+        print("Aap", attempt, "attempts mein jeet gaye!")
         break
+else:
+    print("Game Over!")
+    print("Sahi number tha:", number)
