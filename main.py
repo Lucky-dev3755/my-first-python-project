@@ -34,8 +34,8 @@ while True:
             print("Sirf number dalo!")
             continue
 
-        if guess < number:
-            print("Thoda bada number try karo!")
+        if guess < 1 or guess > max_number:
+            print("please 1 se", max_number,  "ke beech number dalo!")
         elif guess > number:
             print("Thoda chhota number try karo!")
         else:
