@@ -28,6 +28,7 @@ while True:
 
     for attempt in range(1, max_attempts + 1):
         try:
+            print("Attempts remaining:", max_attempts - attempts + 1)
             guess = int(input("Apna guess dalo: "))
         except ValueError:
             print("Sirf number dalo!")
