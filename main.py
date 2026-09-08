@@ -2,6 +2,7 @@ import random
 best_SCORE = 0
 while True:
     print("\nNumber Guessing Game")
+    print("Current Best Score:", best_score)
     print("Difficulty choose karo:")
     print("1. Easy (1-50)")
     print("2. Medium (1-100)")
