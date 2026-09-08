@@ -7,8 +7,8 @@ while True:
     print("1. Easy (1-50)")
     print("2. Medium (1-100)")
     print("3. Hard (1-200)")
-
-    choice = input("Choice (1/2/3): ")
+    print("4. Quite Game")
+    choice = input("Choice (1/2/3/4): ")
 
     if choice == "1":
         max_number = 50
@@ -16,6 +16,8 @@ while True:
         max_number = 100
     elif choice == "3":
         max_number = 200
+    elif choice == "4":
+        print(Game band ho gaya. Thank you!")
     else:
         print("Invalid choice!")
         continue
