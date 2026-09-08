@@ -8,14 +8,20 @@ while True:
     print("1 se 100 ke beech number guess karo!")
     print("Aapko 7 chances milenge.")
 
-    for attempt in range(1, max_attempts + 1):
+    
+        for attempt in range(1, max_attempts + 1):
+    try:
         guess = int(input("Apna guess dalo: "))
+    except ValueError:
+        print("Sirf number dalo!")
+        continue
 
+   
         if guess < number:
             print("Thoda bada number try karo!")
 
         elif guess > number:
-            print("Thoda chhota number try karo!")
+                   print("Thoda chhota number try karo!")
 
         else:
             score = max_attempts - attempt + 1
@@ -28,8 +34,8 @@ while True:
         print("Game Over!")
         print("Sahi number tha:", number)
 
-    again = input("Dobara khelna hai? (y/n): ")
+   play again = input("Dobara khelna hai? (y/n): ")
 
-    if again.lower() != "y":
+    if play again.lower() != "y":
         print("Game band ho gaya. Thank you!")
         break
