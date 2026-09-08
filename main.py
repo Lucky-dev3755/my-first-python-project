@@ -1,5 +1,9 @@
 import random
-best_SCORE = 0
+try:
+    with open("highscore.txt", "r") as file:
+        best_score = int(file.read())
+except FileNotFoundError:
+    best_score = 0
 while True:
     print("\nNumber Guessing Game")
     print("Current Best Score:", best_score)
@@ -47,6 +51,8 @@ while True:
             print("Aapka score:", score)
             if score > best_score:
                 best_score = score
+                with open("highscore.txt", "w") as file:
+    file.write(str(best_score))
             break
     else:
         print("Game Over!")
