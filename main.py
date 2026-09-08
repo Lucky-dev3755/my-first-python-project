@@ -1,5 +1,5 @@
 import random
-
+best_SCORE = 0
 while True:
     print("\nNumber Guessing Game")
     print("Difficulty choose karo:")
@@ -41,11 +41,13 @@ while True:
             print("Sahi jawab!")
             print("Aapne", attempt, "attempts mein jeet gaye!")
             print("Aapka score:", score)
+            if score > best_score:
+                best_score = score
             break
     else:
         print("Game Over!")
         print("Sahi number tha:", number)
-
+print("Best score:", best_score)
     again = input("Dobara khelna hai? (y/n): ")
 
     if again.lower() != "y":
