@@ -61,11 +61,20 @@ while True:
 
             print("Sahi jawab!")
             print("Aapne", attempt, "attempts mein jeet gaye!")
+            if attempt == 1:
+    print("Amazing! First try mein guess kiya! 🔥")
+elif attempt <= 3:
+    print("Excellent guessing! 👏")
+elif attempt <= 5:
+    print("Good guessing! 👍")
+else:
+    print("Nice! You made it! 💪")
             print("Aapka score:", score)
 if score >= 6:
     print("Excellent! 🔥")
 elif score >= 4:
     print("Very Good! 👏")
+
 elif score >= 2:
     print("Good Job! 👍")
 else:
