@@ -62,7 +62,14 @@ while True:
             print("Sahi jawab!")
             print("Aapne", attempt, "attempts mein jeet gaye!")
             print("Aapka score:", score)
-
+if score >= 6:
+    print("Excellent! 🔥")
+elif score >= 4:
+    print("Very Good! 👏")
+elif score >= 2:
+    print("Good Job! 👍")
+else:
+    print("Keep Practicing! 💪")
             if score > best_score:
                 best_score = score
 
