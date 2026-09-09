@@ -34,14 +34,29 @@ while True:
 
     number = random.randint(1, max_number)
     max_attempts = 7
-
+hint_used = false
     print("1 se", max_number, "ke beech number guess karo!")
     print("Aapko 7 chances milenge.")
 
     for attempt in range(1, max_attempts + 1):
         try:
             print("Attempts remaining:", max_attempts - attempt + 1)
-            guess = int(input("Apna guess dalo: "))
+            if not hint_used:
+    print("Hint: H likho aur hint pao, ya number guess karo.")
+            guess = input("Apna guess dalo: ")
+            guess_input = input("Apna guess dalo: ")
+
+if guess_input.lower() == "h" and not hint_used:
+    if number % 2 == 0:
+        print("💡 Hint: Number EVEN hai.")
+    else:
+        print("💡 Hint: Number ODD hai.")
+    hint_used = True
+    continue
+
+
+    print("Sirf number ya H dalo!")
+    continue
         except ValueError:
             print("Sirf number dalo!")
             continue
