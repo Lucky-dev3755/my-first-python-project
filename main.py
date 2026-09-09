@@ -6,8 +6,8 @@ try:
         best_score = int(file.read())
 except (FileNotFoundError, PermissionError, ValueError):
     best_score = 0
-
-
+    total_game = 0
+    games_won = 0
 while True:
     print("\nNumber Guessing Game")
     print("Current Best Score:", best_score)
@@ -31,7 +31,7 @@ while True:
     else:
         print("Invalid choice!")
         continue
-
+   total_games += 1
     number = random.randint(1, max_number)
     max_attempts = 7
 hint_used = false
@@ -73,7 +73,7 @@ if guess_input.lower() == "h" and not hint_used:
 
         else:
             score = max_attempts - attempt + 1
-
+            games_won += 1
             print("Sahi jawab!")
             print("Aapne", attempt, "attempts mein jeet gaye!")
             if attempt == 1:
@@ -111,7 +111,11 @@ else:
         print("Sahi number tha:", number)
 
     print("Best score:", best_score)
+    print("Total Games:", total_games)
+print("Games Won:", games_won)
 
+win_rate = (games_won / total_games) * 100
+print("Win Rate:", round(win_rate, 1), "%")
     again = input("Dobara khelna hai? (y/n): ")
 
     if again.lower() != "y":
